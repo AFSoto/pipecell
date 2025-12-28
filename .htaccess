@@ -1,0 +1,21 @@
+<ifmodule mod_rewrite.c>
+    #activar rewite
+    RewriteEngine On
+
+    # Excepción: no reescribir nada dentro de /views/
+    #  RewriteCond %{REQUEST_URI} !^/tienda_ropa/views/
+
+    #para manejar las vistas que van a mostrar los errores 
+    errorDocument 404 http://localhost/pipecel/error/
+    
+    #“Aplica la siguiente regla solo si el archivo solicitado NO existe físicamente en el servidor”.
+    rewritecond %{SCRIPT_FILENAME} !-f
+    #“Aplica la regla solo si el directorio solicitado no existe”.
+    rewritecond %{SCRIPT_FILENAME} !-d
+
+    #Estas dos condiciones (!-f y !-d) son una protección para que
+    # Apache no trate de redirigir archivos o carpetas reales a index.php.
+
+    rewriteRule ^(.*)/(.*) index.php?controller=$1&action=$2
+
+</ifmodule>
