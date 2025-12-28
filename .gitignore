@@ -1,0 +1,24 @@
+# --- Archivos de Sistema ---
+.DS_Store
+Thumbs.db
+
+# --- Configuración de VS Code / Editores ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- XAMPP y Temporales ---
+php_errors.log
+error_log
+
+
+# --- Base de Datos / Seguridad ---
+.env
+/vendor
+
+# --- Archivos de respaldo ---
+*.bak
+*.tmp
+*.swp
+

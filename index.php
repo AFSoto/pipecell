@@ -2,6 +2,12 @@
 
 session_start();
 require_once 'autoload.php';
+require_once 'vendor/autoload.php';
+use Dotenv\Dotenv;
+
+// Carga el archivo .env desde la raíz de pipecell
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 require_once 'config/db.php';
 require_once 'config/parameters.php';
 require_once 'helpers/utils.php';
