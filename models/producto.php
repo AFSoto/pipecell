@@ -7,12 +7,14 @@ class Producto
 {
     private int $id;
     private int $categoria_id;
+    private string $codigo;
     private string $nombre;
     private ?string $descripcion = null;
     private float $precio_compra;
     private float $precio_venta;
     private int $stock;
-    private string $estado;
+    private string $estado = 'activo';
+    
 
 
     // Getters
@@ -25,6 +27,12 @@ class Producto
     public function getCategoriaId(): int
     {
         return $this->categoria_id;
+    }
+
+
+    public function getCodigo(): string
+    {
+        return $this->codigo;
     }
 
 
@@ -74,6 +82,11 @@ class Producto
     public function setCategoriaId(int $categoria_id): void
     {
         $this->categoria_id = $categoria_id;
+    }
+
+    public function setCodigo(string $codigo): void
+    {
+        $this->codigo = $codigo;
     }
 
 

@@ -47,10 +47,13 @@
                     <a class="nav-link active" href="<?= BASE_URL ?>">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL ?>reparacion/index">Reparaciones</a>
+                    <a class="nav-link" href="#">servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inventario</a>
+                    <a class="nav-link" href="#">tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= BASE_URL ?>user/loginVista">Admin</a>
                 </li>
             </ul>
         </div>

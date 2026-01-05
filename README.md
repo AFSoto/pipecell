@@ -16,7 +16,7 @@ Pipecell es una aplicación web desarrollada en PHP para la gestión de servicio
 
 Primero, clona el repositorio en tu carpeta `htdocs`:
 ```bash
-git clone https://github.com/tu-usuario/pipecell.git
+git clone https://github.com/AFSoto/pipecell.git
 cd pipecell
 ```
 
