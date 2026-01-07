@@ -1,4 +1,89 @@
 <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
+<section class="container-fluid py-4">
+    <div class="row g-4">
+
+        <div class="col-12 col-md-6 col-xl-3">
+            <div class="card border-0 shadow-sm rounded-4 h-100 border-start border-danger border-4">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <p class="text-muted small fw-bold text-uppercase mb-1" style="letter-spacing: 0.5px;">Ganancias Hoy</p>
+                            <h2 class="fw-bold mb-0">$1.250</h2>
+                        </div>
+                        <div class="bg-danger bg-opacity-10 text-danger rounded-circle p-3 d-flex shadow-sm">
+                            <i class="bi bi-cash-coin fs-4"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 rounded-pill px-2 py-1 me-2">
+                             <i class="bi bi-clock-history me-1"></i>Hoy
+                        </span>
+                        <small class="text-muted">Actualizado ahora</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-3">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <p class="text-muted small fw-bold text-uppercase mb-1" style="letter-spacing: 0.5px;">Este Mes</p>
+                            <h2 class="fw-bold mb-0">$28.450</h2>
+                        </div>
+                        <div class="bg-success bg-opacity-10 text-success rounded-circle p-3 d-flex shadow-sm">
+                            <i class="bi bi-graph-up-arrow fs-4"></i>
+                        </div>
+                    </div>
+                    <p class="text-success small mb-0 fw-bold">
+                        <i class="bi bi-arrow-up-circle-fill me-1"></i>+15.3% <span class="text-muted fw-normal">vs mes anterior</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-3">
+            <div class="card border-0 shadow-sm rounded-4 h-100 border-start border-danger border-4">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <p class="text-muted small fw-bold text-uppercase mb-1" style="letter-spacing: 0.5px;">Reparaciones</p>
+                            <h2 class="fw-bold mb-0">12</h2>
+                        </div>
+                        <div class="bg-danger bg-opacity-10 text-danger rounded-circle p-3 d-flex shadow-sm">
+                            <i class="bi bi-tools fs-4"></i>
+                        </div>
+                    </div>
+                    <p class="text-muted small mb-0">
+                        <strong>156</strong> tareas finalizadas
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-3">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <p class="text-muted small fw-bold text-uppercase mb-1" style="letter-spacing: 0.5px;">Inventario</p>
+                            <h2 class="fw-bold mb-0">87</h2>
+                        </div>
+                        <div class="bg-warning bg-opacity-10 text-warning rounded-circle p-3 d-flex shadow-sm">
+                            <i class="bi bi-box-seam fs-4"></i>
+                        </div>
+                    </div>
+                    <div class="bg-danger bg-opacity-10 text-danger rounded-pill px-3 py-1 d-inline-block">
+                        <small class="fw-bold"><i class="bi bi-exclamation-triangle-fill me-1"></i>8 críticos</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <main class="container my-5">
 
     <!-- BIENVENIDA -->
@@ -45,7 +130,7 @@
                     <p class="card-text text-muted">
                         Administra tu inventario de accesorios y celulares nuevos por categorías.
                     </p>
-                    <a href="#" class="btn btn-danger mt-auto">
+                    <a href="<?= BASE_URL ?>inventario/index" class="btn btn-danger mt-auto">
                         Ver Inventario
                     </a>
                 </div>

@@ -19,7 +19,13 @@ $isAjax = (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTT
         || (isset($_GET['action']) && str_contains($_GET['action'], 'Ajax'));
 
 if (!$isAjax) {
-    require_once 'views/layout/header.php';
+    if (isset($_SESSION['admin'])) {
+        require_once 'views/layout/header-admin.php';
+    }
+    else{
+        require_once 'views/layout/header.php';
+    }
+    
 }
 
 // --- Controlador principal ---
