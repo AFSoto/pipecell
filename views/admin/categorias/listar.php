@@ -126,7 +126,7 @@
                                             data-bs-target="#modalEditarCategoria<?= $cat->id ?>">
                                             <i class="bi bi-pencil-square fs-5"></i>
                                         </button>
-                                        <a href="<?= BASE_URL ?>categoria/eliminar&id=<?= $cat->id ?>"
+                                        <a href="<?= BASE_URL ?>categoria/delete&id=<?= $cat->id ?>"
                                             onclick="return confirm('¿Estás seguro de eliminar esta categoría?')"
                                             class="btn btn-link text-danger p-1 shadow-none" title="Eliminar">
                                             <i class="bi bi-trash3 fs-5"></i>

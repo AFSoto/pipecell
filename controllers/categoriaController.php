@@ -86,4 +86,31 @@ class categoriaController {
     }
     exit();
 }
+
+
+public function delete(): void {
+    // 1. Protección
+    utils::isAdmin();
+
+    if (isset($_GET['id'])) {
+        $id = (int)$_GET['id'];
+        
+        $categoria = new Categoria();
+        $categoria->setId($id);
+
+        // Ejecuta el borrado lógico (UPDATE estado = 'inactivo')
+        $delete = $categoria->delete();
+
+        if ($delete) {
+            $_SESSION['categoria_res_delete'] = "La categoría ha sido eliminada del listado.";
+        } else {
+            $_SESSION['error_categoria_delete'] = "No se pudo eliminar la categoría.";
+        }
+    }
+    
+    header("Location: " . BASE_URL . "categoria/index");
+    exit();
+}
+
+
 }

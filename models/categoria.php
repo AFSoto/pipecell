@@ -69,7 +69,7 @@ class Categoria
 
     public function getAll(): bool|object {
         try{
-            $sql = "SELECT * FROM categorias ORDER BY nombre ASC";
+            $sql = "SELECT * FROM categorias WHERE estado = 'activo' ORDER BY nombre ASC";
             $stmt = $this->db->query($sql);
 
             //retornamos el resultado para que el controlador lo procese
@@ -110,4 +110,19 @@ public function getOne(): object {
     return $stmt->fetch(PDO::FETCH_OBJ);
 }
     
+
+// Cambiamos el DELETE real por un UPDATE de estado
+public function delete(): bool {
+    try {
+        $sql = "UPDATE categorias SET estado = 'inactivo' WHERE id = :id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':id', $this->id, PDO::PARAM_INT);
+        return $stmt->execute();
+    } catch (PDOException $e) {
+        error_log("Error al desactivar categoría: " . $e->getMessage());
+        return false;
+    }
+}
+
+
 }
