@@ -5,13 +5,9 @@
     <title>PipeCel - Panel Principal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- javascrip personal -->
-    <script src="<?= BASE_URL ?>assets/js/js.js"></script>
+    
 
-    <script>
-    // Pasamos la constante de PHP a una variable global de JavaScript
-    const BASE_URL = "<?= BASE_URL ?>";
-    </script>
+    
 
     <!-- Bootstrap CSS -->
     <link 

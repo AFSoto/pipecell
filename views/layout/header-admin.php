@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PipeCel Admin - Dashboard</title>
 
+    <!-- javascrip personal -->
+    <script src="<?= BASE_URL ?>assets/js/js.js"></script>
+
+    <script>
+    // Pasamos la constante de PHP a una variable global de JavaScript
+    const BASE_URL = "<?= BASE_URL ?>";
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
